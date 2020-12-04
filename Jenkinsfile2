@@ -17,9 +17,9 @@ node {
     }
   
     stage('deploy') {
-      def webAppResourceGroup = '<myResourceGroup>'
-      def webAppName = '<app_name>'
-      def acrName = '<myRegistry>'
+      def webAppResourceGroup = 'pcappservicelinuxrg'
+      def webAppName = 'pcapplinux'
+      def acrName = 'pcacrjenkins20'
       def imageName = 'calculator'
       // generate version, it's important to remove the trailing new line in git describe output
       def version = sh script: 'git describe | tr -d "\n"', returnStdout: true
